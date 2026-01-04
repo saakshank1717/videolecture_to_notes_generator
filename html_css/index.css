@@ -1,0 +1,139 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298, #4facfe, #00f2fe);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+header h1 {
+    font-size: 3rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+header p {
+    font-size: 1.2rem;
+    color: #cce7ff;
+}
+
+/* Glass upload card */
+.glass-card {
+    background: rgba(255,255,255,0.08);
+    border-radius: 20px;
+    padding: 2rem;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    text-align: center;
+    width: 400px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+#videoUpload {
+    display: none;
+}
+
+.upload-label {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 0.8rem 2rem;
+    background: rgba(255,255,255,0.15);
+    color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+.upload-label:hover {
+    background: rgba(255,255,255,0.25);
+    transform: scale(1.05);
+}
+
+.submit-btn {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 25px;
+    background: rgba(0,123,255,0.4);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.submit-btn:hover {
+    background: rgba(0,123,255,0.6);
+    transform: scale(1.05);
+}
+
+/* Spinner */
+#spinner {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: white;
+}
+
+/* Big output section */
+.output-card {
+    width: 70%;
+    height: 70%;
+    background: rgba(255,255,255,0.1);
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    padding: 2rem;
+    margin-top: 20px;
+    overflow-y: auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.25);
+}
+
+.output-card h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+#summaryText {
+    white-space: pre-wrap;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #f5faff;
+}
+
+.download-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 0.8rem 2rem;
+    border-radius: 25px;
+    background: rgba(0,200,120,0.4);
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+.download-btn:hover {
+    background: rgba(0,200,120,0.6);
+    transform: scale(1.05);
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LECTURELY</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <header>
+        <h1>LECTURELY</h1>
+        <p>Summarize Every Lecture in a Click</p>
+    </header>
+
+    <div class="glass-card">
+        <form id="videoForm" enctype="multipart/form-data">
+            <input type="file" id="videoUpload" name="video" accept="video/mp4">
+            <label for="videoUpload" class="upload-label">Choose Video</label>
+            <button type="submit" class="submit-btn">Submit Video</button>
+        </form>
+        <div id="spinner" style="display:none;">YOUR NOTES ARE BEING GENERATED</div>
+    </div>
+
+    <!-- Big output section -->
+    <div id="outputCard" class="output-card" style="display:none;">
+        <h2>Generated Notes</h2>
+        <div id="summaryText"></div>
+        <a id="downloadLink" href="#" class="download-btn" style="display:none;">Download PDF</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='index.js') }}"></script>
+</body>
+</html>
